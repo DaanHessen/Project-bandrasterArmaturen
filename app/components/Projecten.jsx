@@ -47,7 +47,7 @@ const Projecten = () => {
           </div>
 
           {/* New container with white background and title */}
-          <div className="bg-white bg-opacity-75 p-6 rounded-xl">
+          <div className="bg-white p-6 rounded-xl z-1">
             <h2 className="text-2xl font-semibold mb-4">/projects</h2>
 
             <div className="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">

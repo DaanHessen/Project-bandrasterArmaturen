@@ -14,17 +14,17 @@ const HeroSection = () => {
     return (
         <section>
             <div className="max-w-5xl ml-10">
-                <div className={`py-4 px-4 text-center sm:text-left mt-12 backdrop-blur ${animate ? 'start-animation' : ''}`}>
+                <div className={`py-4 px-24 text-center sm:text-left mt-12 backdrop-blur ${animate ? 'start-animation' : ''}`}>
                     <h1 className="mb-1 font-bold slide-in-first">
-                        <span className="text-5xl sm:text-6xl lg:text-6xl text-white font-bold">
-                            Design & vormgeving{" "}
+                        <span className="text-4xl sm:text-5xl lg:text-6xl text-white font-bold">
+                            Ontdek de elegantie van{" "}
                         </span>
                         <span className="text-5xl sm:text-6xl lg:text-7xl text-[#a41c44] font-bold">
-                            'vloeiend'
+                            bandraster armaturen.
                         </span>
                     </h1>
                     <h2 className="text-xl sm:text-4xl lg:text-5xl text-white mb-6 slide-in-second font-normal">
-                             vertaald in verlichting
+                             Verlicht uw ruimte met stijl 
                     </h2>
                     <p className="text-lg sm:text-xl text-white mb-0 slide-in-third">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa. 
