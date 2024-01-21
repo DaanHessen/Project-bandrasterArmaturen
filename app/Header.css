@@ -1,0 +1,47 @@
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header-animation {
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+.nav-item {
+    position: relative;
+    animation: slideDown 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font: thin 1.125rem/1.5rem 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #a41c44;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a41c44;
+    transition: width .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
