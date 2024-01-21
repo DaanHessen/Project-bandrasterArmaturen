@@ -9,39 +9,39 @@ const Projecten = () => {
     {
       link: "add link here",
       image: "/images/1.jpeg",
-      comment: `<b>Project 1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+      comment: `<b>Project 1 |</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
     },
     {
       link: "add link here",
       image: "/images/10.jpg",
-      comment: `<b>Project 2</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+      comment: `<b>Project 2 |</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
     },
     {
       link: "add link here",
       image: "/images/3.webp",
-      comment: `<b>Project 3</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+      comment: `<b>Project 3 |</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
     },
     {
       link: "add link here",
       image: "/images/4.webp",
-      comment: `<b>Project 4</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+      comment: `<b>Project 4 |</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
     },
     {
       link: "add link here",
       image: "/images/5.webp",
-      comment: `<b>Project 5</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+      comment: `<b>Project 5 |</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
     },
     {
       link: "add link here",
       image: "/images/6.jpg",
-      comment: `<b>Project 6</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+      comment: `<b>Project 6 |</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
     },
   ];
 
   return (
     <>
       <div className="">
-        <div className="p-6 container mx-auto mt-120">
+        <div className="p-6 container mx-auto -[mt-20]">
           <div className="py-2">
             <h1 className="text-center text-4xl">My App</h1>
           </div>

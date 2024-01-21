@@ -22,6 +22,8 @@ export default function Home() {
             <div className="z-10 relative">
                 <Header />
                 <HeroSection />
+                {/* Title before Projecten */}
+                <h2 className="text-left pl-40 text-4xl sm:text-5xl lg:text-6xl text-white font-bold pt-140">/Projecten</h2>
             </div>
             {isLoaded && <Projecten />}
         </div>
