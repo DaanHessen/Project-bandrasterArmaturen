@@ -1,75 +1,101 @@
 import globals from 'app/globals.css';
 import React from 'react';
-import { useInView } from 'react-intersection-observer'; // Make sure to install this package
+import Image from "next/image";
+import Link from "next/link";
 
-
-const projects = [
-    // Add your project details here
-    // Example:
-    { title: 'Project 1', description: 'Description 1', imageUrl: '/images/1.jpeg' },
-    { title: 'Project 2', description: 'Description 2', imageUrl: '/images/2.jpeg' },
-    { title: 'Project 3', description: 'Description 2', imageUrl: '/images/3.webp' },
-    { title: 'Project 4', description: 'Description 2', imageUrl: '/images/4.webp' },
-    { title: 'Project 5', description: 'Description 2', imageUrl: '/images/5.webp' },
-    { title: 'Project 6', description: 'Description 2', imageUrl: '/images/6.jpg' },
-    { title: 'Project 7', description: 'Description 2', imageUrl: '/images/7.jpg' },
-    { title: 'Project 8', description: 'Description 2', imageUrl: '/images/8.jpg' },
-    { title: 'Project 9', description: 'Description 2', imageUrl: '/images/9.jpg' },
-    { title: 'Project 10', description: 'Description 2', imageUrl: '/images/10.jpg' },
-    { title: 'Project 11', description: 'Description 2', imageUrl: '/images/11.png' },
-    { title: 'Project 12', description: 'Description 2', imageUrl: '/images/12.jpeg' },
-    // ... up to 12 projects
-];
-
-const ProjectCard = ({ title, description, imageUrl }) => {
-    const [ref, inView] = useInView({
-      triggerOnce: true,
-      threshold: 0.3, // Adjust threshold for better animation trigger
-    });
-  
-    return (
-      <div ref={ref} className={`group cursor-pointer overflow-hidden bg-[#a41c44] rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 ${inView ? 'opacity-100 translateY-0' : 'opacity-0 -translate-y-10'}`}>
-          <img src={imageUrl} alt={title} className="w-full h-64 object-cover"/>
-          <div className="p-4">
-              <h3 className="text-white text-lg font-bold">{title}</h3>
-              <p className="text-gray-300">{description}</p>
+const Projecten = () => {
+  const data = [
+    {
+      link: "add link here",
+      image:
+        "/images/1.jpeg",
+      comment: `<b>Project 1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+    },
+    {
+      link: "add link here",
+      image:
+        "/images/10.jpg",
+      comment: `<b>Project 2</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+    },
+    {
+      link: "add link here",
+      image:
+        "/images/3.webp",
+      comment: `<b>Project 3</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+    },
+    {
+      link: "add link here",
+      image:
+        "/images/4.webp",
+      comment: `<b>Project 4</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+    },
+    {
+      link: "add link here",
+      image:
+        "/images/5.webp",
+      comment: `<b>Project 5</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+    },
+    {
+      link: "add link here",
+      image:
+        "/images/6.jpg",
+      comment: `<b>Project 6</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.`,
+    },
+  ];
+  return (
+    <>
+      <div className="">
+        <div className="p-6 container mx-auto mt-120 ">
+          <div className="py-2">
+            <h1 className="text-center text-4xl">My App</h1>
           </div>
-      </div>
-    );
-  };
-  
-  const Projecten = () => {
-    return (
-      <div className="bg-[#ffffff]">
-        <div className="container mx-auto p-4 max-w-full">
-          <h2 className="text-3xl font-bold text-center mb-8">/projecten</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))} 
+          <div className="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+            {data.map((x) => {
+              return (
+                <>
+                  <article
+                    key={x.comment}
+                    className="p-6 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                  >
+                    <Link
+                      href={x.link}
+                      className="absolute opacity-0 top-0 right-0 left-0 bottom-0"
+                    />
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        src={x.image}
+                        alt=""
+                      />
+                      <Link
+                        className="flex justify-center items-center bg-[#a41c44] bg-opacity-80  absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                        href={x.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Meer info
+                      </Link>
+                    </div>
+                    <h3 className="font-medium text-xl leading-8">
+                      <Link
+                        href="https://animeflyx.vercel.app/"
+                        className="block relative group-hover:[#a41c44] transition-colors duration-200"
+                      >
+                        <span dangerouslySetInnerHTML={{ __html: x.comment }} />
+                      </Link>
+                    </h3>
+                  </article>
+                </>
+              );
+            })}
           </div>
         </div>
       </div>
-    );
-  }
+    </>
+  );
+};
+
+export default Projecten;
   
-  export default Projecten;
-  
-<style>
-  {`
-    .translateY-0 {
-      transform: translateY(0);
-    }
-    .opacity-100 {
-      opacity: 1;
-      transition: opacity 3s ease-out, transform 3s ease-out; // Slowed down to 1 second
-    }
-    .opacity-0 {
-      opacity: 0;
-    }
-    .-translate-y-10 {
-      transform: translateY(-10px);
-      transition: transform 3s ease-out; // Slowed down to 1 second
-    }
-  `}
-</style>
