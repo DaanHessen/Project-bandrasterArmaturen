@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.5",
     "framer-motion": "^10.18.0",
+    "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "nanogallery2": "^3.0.5",
     "next": "14.0.4",

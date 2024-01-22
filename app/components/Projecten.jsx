@@ -41,15 +41,7 @@ const Projecten = () => {
   return (
     <>
       <div className="">
-        <div className="p-6 container mx-auto -[mt-20]">
-          <div className="py-2">
-            <h1 className="text-center text-4xl">My App</h1>
-          </div>
-
-          {/* New container with white background and title */}
-          <div className="bg-white p-6 rounded-xl z-1">
-            <h2 className="text-2xl font-semibold mb-4">/projects</h2>
-
+        <div className="p-6 container mx-auto">
             <div className="md:grid md:gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {data.map((x, index) => (
                 <article
@@ -81,7 +73,6 @@ const Projecten = () => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

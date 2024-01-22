@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Projecten from 'app/components/Projecten.jsx'; 
-import SlideshowComponent from 'app/components/SlideshowComponent.jsx'; // Import the SlideshowComponent
+import SlideshowComponent from 'app/components/SlideshowComponent.jsx'; 
+import AnimatedProjectTitle from 'app/components/AnimatedProjectTitle.jsx';
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -18,12 +19,11 @@ export default function Home() {
 
     return (
         <div className={`bg-white ${!isLoaded ? 'invisible' : ''}`}>
-            <SlideshowComponent images={images} /> {/* Use the SlideshowComponent */}
+            <SlideshowComponent images={images} /> 
             <div className="z-10 relative">
                 <Header />
                 <HeroSection />
-                {/* Title before Projecten */}
-                <h2 className="text-left pl-40 text-4xl sm:text-5xl lg:text-6xl text-white font-bold pt-140">/Projecten</h2>
+                <AnimatedProjectTitle />
             </div>
             {isLoaded && <Projecten />}
         </div>
