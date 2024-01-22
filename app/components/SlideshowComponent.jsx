@@ -19,6 +19,7 @@ const SlideshowComponent = ({ images }) => {
         autoplay: true,
         easing: "ease",
     };
+ 
 
     // Function to handle scroll and update blur
     const handleScroll = () => {
